@@ -30,13 +30,13 @@ See readme in each project for more details on how to load these variables and c
 
 RAW sequencing data (fastq files) required as starting point for this analysis were uploaded to Gene Expression Omnibus:
 * Bulk (ion-torrent):
-* Single-cell (10x genomics): 
+* Single-cell (10x genomics): [GSE246333](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE246333)
 
 ### Processed data
 
-Resulting reports and files for all analysis steps were uploaded to Research Data Gouv:
+Resulting reports and files for all analysis steps were uploaded to [recherche.data.gouv.fr](recherche.data.gouv.fr):
 * Bulk (ion-torrent):
-* Single-cell (10x genomics): 
+* Single-cell (10x genomics): [doi/10.57745/KPIAYZ](https://doi.org/10.57745/KPIAYZ)
 
 ## Project naming
 
@@ -49,7 +49,7 @@ This name is used extensively in the scripts (mostly for input path and output f
 
 ## Reproducing results
 
-To execute analyses, one needs to download Docker images from corresponding repository on Recherche Data Gouv (Dockerfile source available in github folder 02_Container). 
+To execute analyses, one needs to download Docker images from corresponding "Processed data" repository (source for Dockerfile available in github subfolder). 
 It is recommended to clone the repository, and modify `globalParams.R` files to match the path where the repository has been cloned. 
 
 Then, each analysis step should provide a script that can be executed within the appropriate container. 
