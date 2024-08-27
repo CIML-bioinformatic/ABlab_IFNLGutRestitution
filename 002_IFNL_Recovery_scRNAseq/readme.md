@@ -2,6 +2,17 @@
 
 Source code and scripts for bioinformatics analyses of 10x Genomics single-cell dataset.
 
+## Structure
+
+First, individual experimental conditions were processed in separate folders:
+* 20230601_10X_RNAseq_KO
+* 20230601_10X_RNAseq_WT
+
+
+After quality control and non-ambigous identification of cells populations, both conditions were merged:
+* 20230801_WT_KO_Merge01: only crypt-associated cells were merged together to allow a finer analysis of subpopulations
+* 20240418_WT_KO_MergeAllCells: a merge of all cells identified in individual datasets (KO+WT) gives a large overview of the experimental condition
+
 ## What are 'globalParams.R' and 'analysisParams.R' file ?
 
 Both files are R scripts that aim to be sourced by other (analysis) scripts to provide pre-configured variables.
