@@ -1,0 +1,13 @@
+FROM rocker/tidyverse:4.1.1
+
+MAINTAINER Lionel Spinelli (lionel.spinelli@univ-amu.fr)
+
+
+RUN R -e 'install.packages( "funr")'
+RUN R -e 'install.packages( "digest")'
+RUN R -e 'install.packages( "fs")'
+RUN R -e 'install.packages( "pander")'
+
+
+RUN R -e 'install.packages( "DT")'
+RUN R -e 'install.packages( "pheatmap")'

@@ -1,0 +1,49 @@
+FROM rocker/tidyverse:4.1.1
+
+MAINTAINER Lionel Spinelli (lionel.spinelli@univ-amu.fr)
+
+
+RUN R -e 'install.packages( "funr")'
+RUN R -e 'install.packages( "digest")'
+RUN R -e 'install.packages( "fs")'
+RUN R -e 'install.packages( "pander")'
+
+
+RUN R -e 'install.packages( "DT")'
+RUN R -e 'install.packages( "gridExtra")'
+RUN R -e 'install.packages( "pheatmap")'
+
+# Install BiocManager
+RUN R -e 'install.packages("BiocManager")'
+
+# Package for DEseq2 analysis
+RUN R -e 'install.packages( "tximport")'
+RUN R -e 'install.packages( "readr")'
+RUN R -e 'install.packages( "tximportData")'
+RUN R -e 'install.packages( "tximeta")'
+RUN R -e 'BiocManager::install( "DESeq2")'
+RUN R -e 'BiocManager::install( "apeglm")'
+RUN R -e 'BiocManager::install( "vsn")'
+RUN R -e 'install.packages( "hexbin")'
+RUN apt-get update && apt-get install -y libxt-dev libproj-dev
+RUN R -e 'install.packages( "Cairo")'
+RUN R -e 'BiocManager::install("EnhancedVolcano")'
+
+# Package for functional analysis
+RUN R -e 'BiocManager::install( "org.Mm.eg.db")'
+RUN R -e 'BiocManager::install( "DOSE")'
+RUN R -e 'BiocManager::install( "pathview")'
+RUN apt-get update && apt-get install -y libglpk-dev
+RUN R -e 'BiocManager::install( "clusterProfiler")'
+RUN R -e 'BiocManager::install( "AnnotationHub")'
+RUN apt-get update && apt-get install -y libbz2-dev libclang-dev liblzma-dev
+RUN R -e 'BiocManager::install( "ensembldb")'
+RUN R -e 'install.packages( "ggnewscale")'
+RUN R -e 'BiocManager::install( "rrvgo")'
+RUN R -e 'BiocManager::install( "ComplexHeatmap")'
+
+
+
+
+
+

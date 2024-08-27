@@ -1,0 +1,21 @@
+FROM rocker/tidyverse:4.1.2
+
+MAINTAINER Lionel Spinelli (lionel.spinelli@univ-amu.fr)
+
+# Package for reporting
+RUN R -e 'install.packages( "funr")'
+RUN R -e 'install.packages( "digest")'
+RUN R -e 'install.packages( "fs")'
+RUN R -e 'install.packages( "pander")'
+
+# Package for data plot
+RUN R -e 'install.packages( "DT")'
+RUN R -e 'install.packages( "pheatmap")'
+RUN R -e 'install.packages( "kableExtra")'
+
+
+# Package for data load
+RUN R -e 'install.packages( "readxl")'
+
+# Package for data analysis
+RUN R -e 'install.packages( "rstatix")'

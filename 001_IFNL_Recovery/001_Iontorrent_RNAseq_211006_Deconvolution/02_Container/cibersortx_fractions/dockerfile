@@ -1,0 +1,10 @@
+FROM cibersortx/fractions
+
+MAINTAINER Lionel Spinelli (lionel.spinelli@univ-amu.fr)
+
+# Token to use Cibersortx/fractions
+# New token: b15d4d99af808126561b9561c4ebc9d5, valid until 2022-04-06 09:14:03
+
+# Token with lionel.spinelli@univ-amu.fr on 10.42.133.226
+# New token: 340a6d2a39e309b2b0acafbc95466382, valid until 2022-04-20 09:31:02
+

@@ -1,0 +1,125 @@
+Sending build context to Docker daemon   5.12kB
+Step 1/30 : FROM rocker/tidyverse:4.1.1
+ ---> 522486eaf782
+Step 2/30 : MAINTAINER Lionel Spinelli (lionel.spinelli@univ-amu.fr)
+ ---> Using cache
+ ---> 34108b2961db
+Step 3/30 : RUN R -e 'install.packages( "funr")'
+ ---> Using cache
+ ---> c8eaa70f1759
+Step 4/30 : RUN R -e 'install.packages( "digest")'
+ ---> Using cache
+ ---> ee79e62b0f42
+Step 5/30 : RUN R -e 'install.packages( "fs")'
+ ---> Using cache
+ ---> 32142611a865
+Step 6/30 : RUN R -e 'install.packages( "pander")'
+ ---> Using cache
+ ---> ff9d5f2fb292
+Step 7/30 : RUN R -e 'install.packages( "DT")'
+ ---> Using cache
+ ---> d1955f93e3fa
+Step 8/30 : RUN R -e 'install.packages( "gridExtra")'
+ ---> Using cache
+ ---> 0bc37b17f552
+Step 9/30 : RUN R -e 'install.packages( "pheatmap")'
+ ---> Using cache
+ ---> 1d1e92e4c2a4
+Step 10/30 : RUN R -e 'install.packages("BiocManager")'
+ ---> Using cache
+ ---> 935f3d8458c4
+Step 11/30 : RUN R -e 'install.packages( "tximport")'
+ ---> Using cache
+ ---> 01a30edbf48d
+Step 12/30 : RUN R -e 'install.packages( "readr")'
+ ---> Using cache
+ ---> f6418bf23fb9
+Step 13/30 : RUN R -e 'install.packages( "tximportData")'
+ ---> Using cache
+ ---> b007c74ec8e3
+Step 14/30 : RUN R -e 'install.packages( "tximeta")'
+ ---> Using cache
+ ---> de837aeb27a6
+Step 15/30 : RUN R -e 'BiocManager::install( "DESeq2")'
+ ---> Using cache
+ ---> d62078772daa
+Step 16/30 : RUN R -e 'BiocManager::install( "apeglm")'
+ ---> Using cache
+ ---> 6523623bc255
+Step 17/30 : RUN R -e 'BiocManager::install( "vsn")'
+ ---> Using cache
+ ---> e47a1694b718
+Step 18/30 : RUN R -e 'install.packages( "hexbin")'
+ ---> Using cache
+ ---> c57b4d424a75
+Step 19/30 : RUN apt-get update && apt-get install -y libxt-dev libproj-dev
+ ---> Using cache
+ ---> fa5d9f3e5f50
+Step 20/30 : RUN R -e 'install.packages( "Cairo")'
+ ---> Using cache
+ ---> 92b5f8c1e994
+Step 21/30 : RUN R -e 'BiocManager::install("EnhancedVolcano")'
+ ---> Using cache
+ ---> d0dddff33bfd
+Step 22/30 : RUN R -e 'BiocManager::install( "org.Mm.eg.db")'
+ ---> Using cache
+ ---> 8034f4ba96d5
+Step 23/30 : RUN R -e 'BiocManager::install( "DOSE")'
+ ---> Using cache
+ ---> dff114fc9127
+Step 24/30 : RUN R -e 'BiocManager::install( "pathview")'
+ ---> Using cache
+ ---> da499665b12a
+Step 25/30 : RUN apt-get update && apt-get install -y libglpk-dev
+ ---> Using cache
+ ---> 657317b737e9
+Step 26/30 : RUN R -e 'BiocManager::install( "clusterProfiler")'
+ ---> Using cache
+ ---> d2bf2608d00b
+Step 27/30 : RUN R -e 'BiocManager::install( "AnnotationHub")'
+ ---> Using cache
+ ---> b1e8ea271096
+Step 28/30 : RUN apt-get update && apt-get install -y libbz2-dev libclang-dev liblzma-dev
+ ---> Using cache
+ ---> c68aab69c215
+Step 29/30 : RUN R -e 'BiocManager::install( "ensembldb")'
+ ---> Using cache
+ ---> 13eabe5f9b38
+Step 30/30 : RUN R -e 'install.packages( "ggnewscale")'
+ ---> Running in 1b27806e3c02
+
+R version 4.1.1 (2021-08-10) -- "Kick Things"
+Copyright (C) 2021 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> install.packages( "ggnewscale")
+[91mInstalling package into ‘/usr/local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+[0m[91mtrying URL 'https://packagemanager.rstudio.com/all/__linux__/focal/latest/src/contrib/ggnewscale_0.4.5.tar.gz'
+[0m[91mContent type 'binary/octet-stream' length 179711 bytes (175 KB)
+=====[0m[91m=========================[0m[91m==[0m[91m=[0m[91m====[0m[91m=====[0m[91m========
+downloaded 175 KB
+
+[0m[91m* installing *binary* package ‘ggnewscale’ ...
+[0m[91m* DONE (ggnewscale)
+[0m> 
+> 
+[91m
+The downloaded source packages are in
+	‘/tmp/RtmpmDzM0D/downloaded_packages’
+[0mRemoving intermediate container 1b27806e3c02
+ ---> 710dbf2be072
+Successfully built 710dbf2be072
+Successfully tagged ablab_iflnrecovery_deseq2:latest
