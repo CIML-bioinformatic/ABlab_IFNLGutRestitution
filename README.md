@@ -29,13 +29,13 @@ See readme in each project for more details on how to load these variables and c
 ### RAW data
 
 RAW sequencing data (fastq files) required as starting point for this analysis were uploaded to Gene Expression Omnibus:
-* Bulk (ion-torrent):
+* Bulk (ion-torrent): [GSE247149](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE247149)
 * Single-cell (10x genomics): [GSE246333](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE246333)
 
 ### Processed data
 
 Resulting reports and files for all analysis steps were uploaded to [recherche.data.gouv.fr](recherche.data.gouv.fr):
-* Bulk (ion-torrent):
+* Bulk (ion-torrent): [doi/10.57745/MB71AU](https://doi.org/10.57745/MB71AU)
 * Single-cell (10x genomics): [doi/10.57745/KPIAYZ](https://doi.org/10.57745/KPIAYZ)
 
 ## Project naming
