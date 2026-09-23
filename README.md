@@ -78,6 +78,30 @@ This name is used extensively in the scripts (mostly for input path and output f
 
 ## Reproducing results
 
+### Expected raw data layout
+
+Step `01_CellRanger_FeatureBarcoding` reads its FASTQ from a `00_RAWDATA` folder that is not part of this repository. To re-run it from the reads deposited in GEO ([GSE246333](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE246333)), recreate it per experiment:
+
+```
+20230601_10X_RNAseq_{KO,WT}/00_RAWDATA/
+├── mRNA_fastq/   230525_REC_VIVO_KO_mRNA{1..4}_S{5..8}_R{1,2}_001.fastq.gz
+│                 230525_REC_VIVO_WT_mRNA{1..4}_S{1..4}_R{1,2}_001.fastq.gz
+└── HTO_fastq/    230525_REC_VIVO_KO_HTO{1..4}_S{13..16}_R{1,2}_001.fastq.gz
+                  230525_REC_VIVO_WT_HTO{1..4}_S{9..12}_R{1,2}_001.fastq.gz
+```
+
+Note that these file names carry no lane field: `_S5_R1_001.fastq.gz`, not `_S5_L001_R1_001.fastq.gz`.
+
+File names matter. In `01_Reference/LibrariesDescription.csv` the `sample` column holds a **prefix**, not a file name: Cell Ranger picks up every file of the directory whose name starts with it. Renaming the files, or placing them elsewhere, breaks the match silently.
+
+Symbolic links are enough, and that is how the original project was set up.
+
+Two files then need their paths adapted, as both hold absolute paths of the machine where the analysis ran: `01_Reference/LibrariesDescription.csv` (`fastqs` column) and `03_Script/01_CellRanger_FeatureBarcoding/execute_cell_ranger_featureBC.sh` (taglist, libraries, reference, output).
+
+The step was run with Cell Ranger 7.0.1:
+`cellranger count --libraries ... --feature-ref HTO_taglist.csv --chemistry SC3Pv3`.
+
+
 To execute analyses, one needs to download Docker images from corresponding "Processed data" repository (source for Dockerfile available in github subfolder). 
 It is recommended to clone the repository, and modify `globalParams.R` files to match the path where the repository has been cloned. 
 
