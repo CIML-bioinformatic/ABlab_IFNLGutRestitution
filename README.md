@@ -63,9 +63,9 @@ RAW sequencing data (fastq files) required as starting point for this analysis w
 
 ### Processed data
 
-Resulting reports and files for all analysis steps were uploaded to [recherche.data.gouv.fr](recherche.data.gouv.fr):
-* Bulk (ion-torrent): [doi/10.57745/MB71AU](https://doi.org/10.57745/MB71AU)
-* Single-cell (10x genomics): [doi/10.57745/KPIAYZ](https://doi.org/10.57745/KPIAYZ)
+Resulting reports and files for all analysis steps were uploaded to public repositories:
+* Bulk (ion-torrent): [10.57745/MB71AU](https://doi.org/10.57745/MB71AU) on [recherche.data.gouv.fr](https://recherche.data.gouv.fr)
+* Single-cell (10x genomics): [10.5281/zenodo.22944744](https://doi.org/10.5281/zenodo.22944744) on Zenodo — entry point to 14 records totalling 403 GB
 
 ## Project naming
 
